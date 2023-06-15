@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.gif filter=lfs diff=lfs merge=lfs -text
+build/img/finilsan.gif filter=lfs diff=lfs merge=lfs -text
+build/img/getrelaxed.gif filter=lfs diff=lfs merge=lfs -text
+build/img/isc_website.gif filter=lfs diff=lfs merge=lfs -text
+build/img/makecornpop.gif filter=lfs diff=lfs merge=lfs -text
+build/img/whatsinmybag.gif filter=lfs diff=lfs merge=lfs -text

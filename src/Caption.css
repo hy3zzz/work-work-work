@@ -30,6 +30,8 @@
 }
 
 .caption-year {
+    margin-top: 5px;
+    margin-bottom: 10px;
     font-size: 0.8rem;
 }
 
@@ -39,8 +41,8 @@
 }
 
 .caption-tag {
-    background-color: lightgray;
     font-size: 0.5rem;
+    font-weight: 600;
     padding: 3px 6px;
     margin-right: 3px;
     border-radius: 5px;

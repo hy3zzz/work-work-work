@@ -1,0 +1,42 @@
+.about {
+    display: flex;
+    margin: 10px;
+    width: 600px;
+    word-break: keep-all;
+    gap: 15px;
+}
+
+.name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-wrapper h1 {
+    font-size: 20px;
+}
+
+.name-wrapper h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.major-wrapper h3{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.3rem;
+}
+
+.majoren {
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.des-wrapper {
+    margin-top: 20px;
+}
+
+.des-wrapper p {
+    font-size: 15px;
+    line-height: 1.3rem
+}

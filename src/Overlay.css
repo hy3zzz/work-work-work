@@ -1,5 +1,5 @@
 .overlay {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,42 +13,42 @@
 }
 
 .overlay-content {
-background: white;
-border: 1px solid black;
-border-radius: 5px;
-padding: 20px;
-max-width: 80%;
-max-height: 80%;
-overflow: auto;
-position: relative;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
 }
 
 .overlay-content img {
-max-width: 100%;
-max-height: 100%;
-object-fit: contain;
-margin: auto;
-display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
 }
 
 .overlay-close-button {
-position: absolute;
-top: 7px;
-right: 7px;
-z-index: 100;
-border-radius: 50%;
-border: 0;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 100;
+  border-radius: 50%;
+  border: 0;
 
-justify-content: center;
-align-items: center;
-padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 
-font-size: 8px;
-font-weight: 600;
+  font-size: 8px;
+  font-weight: 600;
 
-background: radial-gradient(50% 50% at 50% 50%, #FF75F1 0%, #FFFFFF 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #ff75f1 0%, #ffffff 100%);
 
-cursor: grab;
+  cursor: grab;
 }
 
 .overlay-content-wrapper {
@@ -59,17 +59,17 @@ cursor: grab;
 
 .overlay-text {
   color: black;
-  width: 30%; 
+  width: 30%;
   word-break: keep-all;
   padding: 0 10px;
-  margin-right: 30px; 
+  margin-right: 30px;
 }
 
 .overlay-text p {
-margin-top: 30px;
-font-size: 15px;
-font-weight: 500;
-line-height: 1.5rem;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 .overlay-image {
@@ -87,43 +87,84 @@ line-height: 1.5rem;
 }
 
 .additional {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .additional img {
-max-width: 80%;
-max-height: 100%;
-object-fit: contain;
-margin: auto;
-display: block;
-margin-bottom: 10px;
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .br-height {
-display: flex;
-height: 5px;
+  display: flex;
+  height: 5px;
 }
 
 .overlay-title {
-font-size: 26px;
-margin-bottom: 0;
+  font-size: 26px;
+  margin-bottom: 0;
 }
 .overlay-year {
-font-size: 20px;
-font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .overlay-tag {
-font-size: 0.8rem;
-font-weight: 600;
-padding: 5px 6px;
-margin-right: 6px;
-border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 6px;
+  margin-right: 6px;
+  border-radius: 10px;
 }
 
 .yVideo {
-margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  /* 768px 미만의 화면 크기에 대해 적용. 이 값은 필요에 따라 조절할 수 있습니다 */
+  .overlay-content {
+    max-width: 90%; /* 폭을 조정 */
+    max-height: 90%; /* 높이를 조정 */
+    flex-direction: column; /* 내용을 수직으로 배열 */
+  }
+
+  .overlay-content-wrapper {
+    flex-direction: column; /* 내용을 수직으로 배열 */
+  }
+
+  .overlay-text,
+  .overlay-image {
+    width: 100%; /* 폭을 100%로 설정하여 전체 폭을 사용 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+  }
+
+  .additional {
+    width: 100%; /* 폭을 100%로 설정하여 전체 폭을 사용 */
+    flex-direction: column; /* 항목을 수직으로 배열 */
+  }
+
+  .additional img {
+    max-width: 100%; /* 이미지의 최대 폭을 100%로 설정 */
+  }
+
+  .yVideo {
+    width: 100%; /* 영상의 폭을 100%로 설정 */
+    height: auto; /* 영상의 높이를 자동으로 설정 */
+    max-width: 100%; /* 영상의 최대 폭을 100%로 설정 */
+    margin-bottom: 20px;
+  }
+
+  iframe.yVideo {
+    width: 100%; /* iframe의 폭을 100%로 설정 */
+    height: auto; /* iframe의 높이를 자동으로 설정 */
+    aspect-ratio: 16/9; /* 16:9 비율을 유지 */
+  }
 }

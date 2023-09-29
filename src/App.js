@@ -399,8 +399,11 @@ const imagesData = [
         <span className="br-height">
           <br />
         </span> */}
-        Outstanding Award in Woodeok New Media Creator Competition Excellence
-        Award in SNUBIZ Startup Competition
+        <b>Outstanding Award in Woodeok New Media Creator Competition</b>
+        <span className="br-height">
+          <br />
+        </span>
+        <b>Excellence Award in SNUBIZ Startup Competition</b>
         <span className="br-height">
           <br />
         </span>
@@ -443,8 +446,11 @@ const imagesData = [
     video: "",
     description: (
       <>
-        Outstanding Award in Woodeok New Media Creator Competition Excellence
-        Award in SNUBIZ Startup Competition
+        <b>Outstanding Award in Woodeok New Media Creator Competition</b>
+        <span className="br-height">
+          <br />
+        </span>
+        <b>Excellence Award in SNUBIZ Startup Competition</b>
         <span className="br-height">
           <br />
         </span>

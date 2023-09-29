@@ -13,7 +13,7 @@ function Overlay({ image, onClose }) {
         className="overlay-content"
         onClick={(event) => event.stopPropagation()}>
         <button className="overlay-close-button" onClick={onClose}>
-          닫기
+          close
         </button>
         <div className="overlay-content-wrapper">
           <div className="overlay-text">

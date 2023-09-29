@@ -327,10 +327,11 @@ const imagesData = [
       <>
         I redesigned the short story 'Encounter on the Gyeongui Jungang Line' by
         the author Shim Neoul. The main graphic element was taken from the route
-        map of the Kyungui Line, and I actively tried to represent the story's
-        content in a concrete form in the inner design. The photos used in the
-        book were also actively expressing a lively yet somewhat uncomfortable
-        mood, for which I conducted the shooting and post-processing myself.
+        map of the Gyeongui Jungang Line, and I actively tried to represent the
+        story's content in a concrete form in the inner design. The photos used
+        in the book were also actively expressing a lively yet somewhat
+        uncomfortable mood, for which I conducted the shooting and
+        post-processing myself.
       </>
     ),
     additionalImages: [

@@ -55,6 +55,9 @@ function Overlay({ image, onClose }) {
             />
           ))}
         </div>
+        <button className="overlay-close-button-btm" onClick={onClose}>
+          Close
+        </button>
       </div>
     </div>
   );

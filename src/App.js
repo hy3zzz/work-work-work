@@ -563,7 +563,7 @@ const imagesData = [
   {
     src: "/img/whoami1.png",
     title: "Who am I for Design Portfolio and Capstone Project",
-    year: "2022",
+    year: "2023",
     tags: ["UX/UI", "website"],
     id: "12",
     video: "",

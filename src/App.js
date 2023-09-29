@@ -334,10 +334,9 @@ const imagesData = [
       </>
     ),
     additionalImages: [
-      "/img/gyeongui1.gif",
-      "/img/gyeongui2.gif",
-      "/img/gyeongui4.gif",
-      "/img/gyeongui5.gif",
+      "/img/gyeongui1.png",
+      "/img/gyeongui2.png",
+      "/img/gyeongui3.png",
     ],
   },
 

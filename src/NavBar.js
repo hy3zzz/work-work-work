@@ -1,12 +1,11 @@
-import React from 'react';
-import './index.css';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import "./index.css";
+import { useLocation } from "react-router-dom";
 
 function NavBar({ allTags, selectedTag, onTagClick }) {
-
   const location = useLocation();
 
-  if (location.pathname !== '/') {
+  if (location.pathname !== "/") {
     return null;
   }
 
@@ -14,9 +13,10 @@ function NavBar({ allTags, selectedTag, onTagClick }) {
     <nav className="navbar-wrapper">
       <select
         className="navbar"
-        value={selectedTag || "all"} 
-        onChange={(event) => onTagClick(event.target.value === "all" ? null : event.target.value)}
-      >
+        value={selectedTag || "all"}
+        onChange={(event) =>
+          onTagClick(event.target.value === "all" ? null : event.target.value)
+        }>
         <option value="all">what?</option>
         {allTags.map((tag, index) => (
           <option key={index} value={tag}>

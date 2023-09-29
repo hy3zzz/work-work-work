@@ -51,7 +51,7 @@ const imagesData = [
   },
 
   {
-    src: "/img/makecornpop.gif",
+    src: "/img/makecornpop.png",
     title: "Make Corn Pop!",
     year: "2022",
     tags: ["website"],
@@ -67,7 +67,7 @@ const imagesData = [
         어떤 결과가 우리를 기다릴까요? */}
       </>
     ),
-    additionalImages: [],
+    additionalImages: ["/img/makecornpop1.png", "/img/makecornpop2.png"],
   },
 
   {
@@ -282,11 +282,11 @@ const imagesData = [
         </a>
       </>
     ),
-    additionalImages: [],
+    additionalImages: ["/img/ilym1.gif"],
   },
 
   {
-    src: "/img/whatsinmybag.gif",
+    src: "/img/whatsinmybag1.png",
     title: "What's in Hyezzz's Bag?",
     year: "2022",
     tags: ["website"],
@@ -313,7 +313,7 @@ const imagesData = [
         with each item.
       </>
     ),
-    additionalImages: ["/img/whatsinmybag1.png", "/img/whatsinmybag2.png"],
+    additionalImages: ["/img/whatsinmybag2.png"],
   },
 
   {

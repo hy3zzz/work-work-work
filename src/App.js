@@ -568,16 +568,29 @@ const imagesData = [
     video: "",
     description: (
       <>
-        This project entailed editorial design work of collecting 10 different
-        sizes based on a specific theme.
+        <a href="https://who-am-i-for-designportfolio.netlify.app">
+          https://who-am-i-for-designportfolio.netlify.app
+        </a>
         <span className="br-height">
           <br />
         </span>
-        Taking the editorial designs used in the field of cultural contents in
-        the past or still in use today as the main theme, the project progressed
-        by working on 10 texts and sizes. Through this, an effort was made to
-        explore and express the diversity and importance of editorial design in
-        the field of cultural contents.
+        The fall semester of 2023 kicked off with two of my major courses
+        immediately assigning me the task of introducing myself. This kind of
+        self-introduction happens 3 to 4 times a year, and each time, crafting a
+        PowerPoint presentation and delivering it felt bland. I can only imagine
+        how dull it must be for the audience.
+        <span className="br-height">
+          <br />
+        </span>
+        Therefore, I utilized my free time to create a virtual self-introduction
+        comic book using the turn.js library.
+        <span className="br-height">
+          <br />
+        </span>
+        I showcased my growth background and notable projects through simple
+        animations, and set a 5-minute timer at the top, enabling both myself
+        and the audience to keep track of the remaining time during the
+        presentation.
       </>
     ),
     additionalImages: ["/img/whoami2.png"],

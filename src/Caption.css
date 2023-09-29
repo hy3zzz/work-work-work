@@ -1,70 +1,71 @@
 .caption {
-    font-family: 'Inter', sans-serif;
-    background-color: white;
-    padding: 10px;
-    border: 0.5px solid black;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  padding: 10px;
+  border: 0.5px solid black;
 }
 
 .caption-ani-enter {
-    opacity: 0;
+  opacity: 0;
 }
-  
+
 .caption-ani-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
+  opacity: 1;
+  transition: opacity 300ms;
 }
-  
+
 .caption-ani-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .caption-ani-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 .caption-title {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: grab;
 }
 
 .caption-year {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 0.8rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .caption-tag {
-    font-size: 0.5rem;
-    font-weight: 600;
-    padding: 3px 6px;
-    margin-right: 3px;
-    border-radius: 5px;
-    cursor: grab;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 3px 6px;
+  margin-right: 3px;
+  border-radius: 5px;
+  cursor: grab;
 }
 
 .topLeft {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
-  
+
 .topRight {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
-  
+
 .bottomLeft {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
-  
+
 .bottomRight {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }

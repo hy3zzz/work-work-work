@@ -5,10 +5,7 @@ import "./App.css";
 import "./Overlay.css";
 import ImageWithCaption from "./ImageWithCaption";
 import NavBar from "./NavBar";
-import About from "./About";
 import Overlay from "./Overlay";
-import FixedImage from "./FixedImage";
-import FixedImage2 from "./FixedImage2";
 import shuffleArray from "./shuffleArray";
 
 const imagesData = [
@@ -94,7 +91,7 @@ const imagesData = [
   },
 
   {
-    src: "/img/fcm.gif",
+    src: "/img/fcm.png",
     title: "Fridge Cliché Mart",
     year: "2023",
     tags: ["graphic", "website"],
@@ -135,7 +132,13 @@ const imagesData = [
         customize their own fridge, by controlling items’ size and position.
       </>
     ),
-    additionalImages: [],
+    additionalImages: [
+      "/img/fcm1.png",
+      "/img/fcm2.png",
+      "/img/fcm3.png",
+      "/img/fcm4.png",
+      "/img/fcm5.png",
+    ],
   },
 
   {
@@ -649,13 +652,10 @@ function App() {
         />
         <Routes>
           <Route path="/" element={<Gallery />} />
-          <Route path="/about" element={<About />} />
         </Routes>
         {selectedImage && (
           <Overlay image={selectedImage} onClose={handleOverlayClose} />
         )}
-        <FixedImage src="/img/bubble.png" />
-        <FixedImage2 src="/img/bubble2.png" />
       </Router>
     </div>
   );

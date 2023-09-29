@@ -163,6 +163,7 @@
   .overlay-image {
     width: 100%; /* 폭을 100%로 설정하여 전체 폭을 사용 */
     margin-right: 0; /* 오른쪽 여백 제거 */
+    padding: 0;
   }
 
   .additional {

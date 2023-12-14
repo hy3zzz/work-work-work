@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
 import "./App.css";
 import "./Overlay.css";
+import "./AboutMO.css";
 import ImageWithCaption from "./ImageWithCaption";
+import About from "./About";
 import NavBar from "./NavBar";
+import ListView from "./ListView";
 import Overlay from "./Overlay";
 import shuffleArray from "./shuffleArray";
+import AboutMO from "./AboutMO";
 
 const imagesData = [
   {
@@ -530,7 +534,7 @@ const imagesData = [
     title: "10 text 10 size",
     year: "2022",
     tags: ["editorial"],
-    id: "12",
+    id: "14",
     video: "",
     description: (
       <>
@@ -565,7 +569,7 @@ const imagesData = [
     title: "Who am I for Design Portfolio and Capstone Project",
     year: "2023",
     tags: ["UX/UI", "website"],
-    id: "12",
+    id: "15",
     video: "",
     description: (
       <>
@@ -599,10 +603,15 @@ const imagesData = [
 ];
 
 function App() {
-  const allTags = [...new Set(imagesData.flatMap((image) => image.tags))];
+  const [selectedTag, setSelectedTag] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const allTags = [...new Set(imagesData.flatMap((image) => image.tags))];
+  const [aboutMOOpen, setAboutMOOpen] = useState(false);
 
+  const handleTagClick = (tag) => {
+    setSelectedTag(tag);
+  };
   const handleImageClick = (image) => {
     setIsOverlayOpen(true);
     setSelectedImage(image);
@@ -613,12 +622,6 @@ function App() {
     setSelectedImage(null);
   };
 
-  const [selectedTag, setSelectedTag] = useState(null);
-
-  const handleTagClick = (tag) => {
-    setSelectedTag(tag);
-  };
-
   const [images, setImages] = useState(imagesData);
   const [filteredImages, setFilteredImages] = useState([]);
 
@@ -627,8 +630,6 @@ function App() {
     const shuffledImages = shuffleArray([...images]);
     setImages(shuffledImages);
   }, []);
-
-  // filter shuffled images whenever selected tag changes
   useEffect(() => {
     const newFilteredImages = selectedTag
       ? images.filter((image) => image.tags.includes(selectedTag))
@@ -636,7 +637,6 @@ function App() {
 
     setFilteredImages(newFilteredImages);
   }, [selectedTag, images]);
-
   const Gallery = () => (
     <Masonry
       breakpointCols={{
@@ -645,7 +645,7 @@ function App() {
         700: 2,
         500: 1,
       }}
-      className="masonry-grid"
+      className="masonry-grid masonry-grid-offset" // Add the offset class here
       columnClassName="masonry-grid_column">
       {filteredImages.map((image) => (
         <ImageWithCaption
@@ -661,20 +661,42 @@ function App() {
     </Masonry>
   );
 
+  const [isAboutExpanded, setIsAboutExpanded] = useState(false);
+
   return (
-    <div style={{ backgroundColor: isOverlayOpen ? "black" : "white" }}>
+    <div
+      className="app-container"
+      style={{ backgroundColor: isOverlayOpen ? "black" : "#F8F8F8" }}>
       <Router>
-        <NavBar
-          allTags={allTags}
-          selectedTag={selectedTag}
-          onTagClick={handleTagClick}
-        />
-        <Routes>
-          <Route path="/" element={<Gallery />} />
-        </Routes>
-        {selectedImage && (
-          <Overlay image={selectedImage} onClose={handleOverlayClose} />
-        )}
+        <button className="fixed-button" onClick={() => setAboutMOOpen(true)}>
+          Click Me
+        </button>
+        {aboutMOOpen && <AboutMO onClose={() => setAboutMOOpen(false)} />}
+        <div className="masonry-container">
+          <NavBar
+            allTags={allTags}
+            selectedTag={selectedTag}
+            onTagClick={handleTagClick}
+          />
+          <Routes>
+            <Route path="/" element={<Gallery />} />
+            <Route
+              path="/list"
+              element={
+                <ListView items={filteredImages} selectedTag={selectedTag} />
+              }
+            />
+          </Routes>
+          {selectedImage && (
+            <Overlay image={selectedImage} onClose={handleOverlayClose} />
+          )}
+        </div>
+        <div
+          className={`about-container ${isAboutExpanded ? "expanded" : ""}`}
+          onMouseEnter={() => setIsAboutExpanded(true)}
+          onMouseLeave={() => setIsAboutExpanded(false)}>
+          <About setIsAboutExpanded={setIsAboutExpanded} />
+        </div>
       </Router>
     </div>
   );

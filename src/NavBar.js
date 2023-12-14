@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 function NavBar({ allTags, selectedTag, onTagClick }) {
   const location = useLocation();
 
-  if (location.pathname !== "/") {
+  if (location.pathname !== "/" && location.pathname !== "/list") {
     return null;
   }
 
@@ -17,7 +17,7 @@ function NavBar({ allTags, selectedTag, onTagClick }) {
         onChange={(event) =>
           onTagClick(event.target.value === "all" ? null : event.target.value)
         }>
-        <option value="all">what?</option>
+        <option value="all">?</option>
         {allTags.map((tag, index) => (
           <option key={index} value={tag}>
             {tag}

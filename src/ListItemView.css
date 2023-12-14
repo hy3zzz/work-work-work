@@ -1,0 +1,63 @@
+/* ListItemView.css */
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ListItemView.css */
+
+.preview-image {
+  position: fixed; /* 이미지가 뷰포트에 상대적으로 위치 */
+  transform: translate(-50%, -50%); /* 마우스 위치를 이미지의 중앙으로 조정 */
+  width: 200px; /* 이미지 너비 */
+  pointer-events: none; /* 이미지 위로 마우스가 이동할 수 있도록 설정 */
+  z-index: 998; /* 다른 요소 위에 이미지가 표시되도록 z-index 설정 */
+}
+
+.preview-image img {
+  width: 200px;
+}
+
+.list-item {
+  margin-left: 2%;
+  background-color: rgb(248, 248, 248);
+  display: grid;
+  grid-template-columns: auto 3fr 1fr 1fr; /* 번호를 위한 추가 컬럼 */
+  align-items: center;
+  cursor: pointer;
+
+  color: #000;
+
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.list-item-index {
+  padding-right: 10px; /* 번호와 제목 사이의 공간 */
+}
+
+.list-item-title {
+  grid-column: 2 / 3;
+  text-align: left;
+}
+
+.list-item-tags,
+.list-item-year {
+  display: flex;
+}
+
+.list-item-tags {
+  grid-column: 3 / 4;
+  text-align: left;
+}
+
+.list-item-year {
+  grid-column: 4 / 5;
+  text-align: left;
+}

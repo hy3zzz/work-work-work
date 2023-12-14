@@ -59,6 +59,12 @@
   margin: auto;
 }
 
+.links a {
+  font-weight: 400;
+  color: blue;
+  text-decoration-line: none;
+}
+
 @media (max-width: 800px) {
   .about {
     display: none;

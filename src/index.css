@@ -149,6 +149,11 @@ code {
   color: white;
 }
 
+.links-mo {
+  color: black;
+  text-decoration-line: none;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);

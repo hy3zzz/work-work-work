@@ -37,9 +37,6 @@ const AboutMO = ({ onClose }) => {
             </Link>
           </div>
         </div>
-        <button className="close-button" onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );

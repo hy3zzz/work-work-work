@@ -70,6 +70,13 @@
   padding: 10px;
 }
 
+.links-mo a {
+  font-weight: 400;
+  color: blue;
+  padding: 10px;
+  text-decoration-line: none;
+}
+
 .profile-mo {
   width: 80%;
   display: block;

@@ -669,7 +669,7 @@ function App() {
       style={{ backgroundColor: isOverlayOpen ? "black" : "#F8F8F8" }}>
       <Router>
         <button className="fixed-button" onClick={() => setAboutMOOpen(true)}>
-          Click Me
+          About
         </button>
         {aboutMOOpen && <AboutMO onClose={() => setAboutMOOpen(false)} />}
         <div className="masonry-container">

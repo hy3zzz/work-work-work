@@ -9,9 +9,12 @@ const AboutMO = ({ onClose }) => {
 
   return (
     <div className="about-mo-container" onClick={onClose}>
-      <div className="about-mo" onClick={{ handleOverlayClick }}>
+      <div className="about-mo" onClick={handleOverlayClick}>
         <div className="about-texts-mo">
-          <img className="profile-mo" src="/img/profile.png"></img>
+          <img
+            className="profile-mo"
+            src="/img/profile.png"
+            alt="Profile"></img>
           <h1 className="name-mo">SHIN HYEWON</h1>
           <p className="desc-mo">
             UX/UI를 공부하고 있습니다.

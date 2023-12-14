@@ -149,8 +149,27 @@ code {
   color: white;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fixed-button {
+  animation: rotate 3s ease-in-out infinite;
+}
+
 @media (max-width: 800px) {
   .app-container {
     grid-template-columns: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .fixed-button {
+    display: none;
   }
 }

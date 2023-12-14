@@ -39,9 +39,9 @@
 
 .about-texts-mo {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Pretendard-Regular";
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4rem;
   color: #f03c06;
   font-stretch: ultra-condensed;
@@ -75,6 +75,7 @@
   color: blue;
   padding: 10px;
   text-decoration-line: none;
+  font-stretch: ultra-condensed;
 }
 
 .profile-mo {

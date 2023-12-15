@@ -166,6 +166,9 @@ code {
   .app-container {
     grid-template-columns: none;
   }
+  .navbar-wrapper {
+    width: 100%;
+  }
 }
 
 @media (min-width: 801px) {
